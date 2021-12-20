@@ -1,0 +1,88 @@
+/*	@computed
+	get selectedProcedures() {
+		const selectedProcedures: {
+			procedure: any;
+			male: number;
+			female: number;
+		}[] = [];
+
+		appointments.list.forEach((appointment) => {
+			if
+				(
+				appointment.patientID === "" ||
+				appointment.procedureId === ""
+			) {
+				return;
+			}
+
+			//!appointment.isPaid
+			console.log("Procedures count: "+ appointment.patient.procedures.length)
+			console.log("Procedures patient name: "+ appointment.patient.name)
+
+			appointment.patient.procedures.forEach((procedure) => {
+					if (procedure.id !== "") {
+					/*	if (selectedProcedures.length !== 0) {
+							const i = selectedProcedures.findIndex(
+							  (proc) => proc.procedure.id === procedure.id
+							);
+							if (i === -1) {//not there b4
+							  console.log("Procedures added afresh"+ procedure.id);
+							  selectedProcedures.push({
+								procedure: procedure,
+								male: 0,
+								female: 0,
+							  });
+							} else {
+								console.log("Procedures existed before"+ JSON.stringify(selectedProcedures[i]));
+								if (
+									(appointment.patient || new Patient()).gender === Gender.female
+								){
+									selectedProcedures[i].female++;
+									} else {
+									selectedProcedures[i].male++;
+								}
+							}
+						  } else {
+							console.log("Procedures added afresh 2");
+							selectedProcedures.push({
+								procedure: procedure,
+								male: 0,
+								female: 0,
+							  });
+						}*/
+
+						const i = selectedProcedures.findIndex(
+							(proc) => proc.procedure.id === procedure.id
+						);
+						let male = 0;
+						let female = 0;
+						if (
+							(appointment.patient || new Patient()).gender ===
+							Gender.female
+						) {
+							female++;
+						} else {
+							male++;
+						}
+		
+						if (i === -1) {
+							console.log("Procedures added afresh "+ procedure.id);
+							// add new
+							selectedProcedures.push({
+								procedure: procedure,
+								male: male,
+								female: female
+							});
+						} else {
+							console.log("Procedures existed before"+ JSON.stringify(selectedProcedures[i]));
+							// just increment
+							selectedProcedures[i].male = selectedProcedures[i].male + male;
+							selectedProcedures[i].female =	selectedProcedures[i].female + female;
+						}
+					}
+			});
+		});
+		return selectedProcedures;
+	}
+
+    

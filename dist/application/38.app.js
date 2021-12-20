@@ -1,0 +1,15 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[38],{
+
+/***/ "./src/modules/implantz/components/page.tsx":
+/*!**************************************************!*\
+  !*** ./src/modules/implantz/components/page.tsx ***!
+  \**************************************************/
+/*! exports provided: ImplantationPanel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ImplantationPanel\", function() { return ImplantationPanel; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mobx */ \"./node_modules/mobx/lib/mobx.module.js\");\n/* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mobx-react */ \"./node_modules/mobx-react/index.module.js\");\n/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core */ \"./src/core/index.ts\");\n\n\n\n\n\nlet ImplantationPanel = class ImplantationPanel extends react__WEBPACK_IMPORTED_MODULE_1__[\"Component\"] {\n    constructor() {\n        super(...arguments);\n        this.selectedID = _core__WEBPACK_IMPORTED_MODULE_4__[\"router\"].currentLocation.split(\"/\")[1];\n    }\n    get canEdit() {\n        return _core__WEBPACK_IMPORTED_MODULE_4__[\"user\"].currentUser.canEditImplants;\n    }\n    render() {\n        return (react__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"](\"div\", { className: \"tc-pg p-15 p-l-10 p-r-10\" }));\n    }\n};\nObject(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__decorate\"])([\n    mobx__WEBPACK_IMPORTED_MODULE_2__[\"observable\"]\n], ImplantationPanel.prototype, \"selectedID\", void 0);\nObject(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__decorate\"])([\n    mobx__WEBPACK_IMPORTED_MODULE_2__[\"computed\"]\n], ImplantationPanel.prototype, \"canEdit\", null);\nImplantationPanel = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__decorate\"])([\n    mobx_react__WEBPACK_IMPORTED_MODULE_3__[\"observer\"]\n], ImplantationPanel);\n\n/**\n *\n *  <AsyncComponent\n              key=\"\"\n              loader={async () => {\n            /*    const ConsentsDetailsPanel = (\n                  await import(\"./page.implantz\")\n                ).ImplantSheetPanel;\n                return (\n                  <ConsentsDetailsPanel\n                  \n                    selected={this.selectedIndex}\n                  />\n                );\n              }}\n              />\n */ \n\n\n//# sourceURL=webpack:///./src/modules/implantz/components/page.tsx?");
+
+/***/ })
+
+}]);

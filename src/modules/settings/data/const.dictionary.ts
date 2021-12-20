@@ -1,0 +1,21 @@
+export const dictionary = {
+    hourlyRate: "hourlyRate",
+    currencySymbol: "currencySymbol",
+    module_prescriptions: "module_prescriptions",
+    module_orthodontics: "module_prescriptions",
+    module_endodontics: "module_endodontics",
+    module_statistics: "module_statistics",
+    module_insurance: "module_insurance",
+    module_expenses: "module_expenses",
+    module_instructions: "module_instructions",
+    module_implants:"module_implants",
+    time_tracking: "time_tracking",
+    module_consents: "module_consents",
+    backup_freq: "backup_freq",
+    backup_retain: "backup_retain",
+    dropbox_accessToken: "dropbox_accessToken",
+    lang: "lang",
+    month_format: "month_format",
+    date_format: "date_format",
+    weekend_num: "weekend_num"
+};

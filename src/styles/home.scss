@@ -1,0 +1,65 @@
+@import "./global-styles/shadows.scss";
+
+.home {
+	.home-td {
+		border-bottom: 1px solid rgb(245, 245, 245);
+	}
+	.no-appointments {
+		font-size: 13px;
+		text-align: center;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		background: #ffffff;
+		margin-top: 0px;
+		z-index: -10;
+		font-style: italic;
+	}
+	.appointments-table-heading {
+		background: #fff;
+		margin: 0;
+		margin-top: 15px;
+		padding: 12px;
+	}
+	.chart-btn {
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		margin-left: 4px;
+		outline: none;
+	}
+	.chart-btn-active {
+		background-color: #00bcd4;
+		color: white;
+		border: 1px solid #00bcd4;
+	}
+	.chart-btn-container {
+		margin-bottom: 16px;
+		margin-top: 16px;
+		display: flex;
+		justify-content: flex-end;
+		width:"100%"
+	}
+	.time-btn-container {
+		margin-bottom: 16px;
+		margin-top: 16px;
+		display: flex;
+		justify-content: flex-end;
+		width:"100%";
+		margin-right : 10px;
+		padding-right: 16px;
+	}
+	.line-charts-container {
+		display: flex;
+		margin-top: 10px;
+	}
+	.line-chart-container {
+		flex: 1;
+		flex-direction: column;
+		text-align: "center";
+		margin-top: 10px;
+	}
+}
+
+#router-outlet {
+	margin-top: 50px;
+	padding-bottom: 20px;
+}

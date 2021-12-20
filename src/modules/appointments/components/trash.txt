@@ -1,0 +1,40 @@
+	<Col sm={12}>
+								<div className="appointment-input treatment">
+									<Dropdown
+										label={text("Lab. Test")}
+										disabled={!this.canEdit}
+										className="treatment-type"
+										selectedKey={
+											this.props.appointment!.treatmentID
+										}
+										options={this.treatmentOptions
+											.sort((a, b) =>
+												a.item.localeCompare(b.item)
+											)
+											.map(tr => {
+												return {
+													key: tr._id,
+													text: tr.item
+												};
+											})}
+										onChange={(e, newValue) => {
+											this.props.appointment!.treatmentID = newValue!.key.toString();
+										}}
+									/>
+								</div>
+							</Col>
+							<Col sm={12}>
+								<div className="appointment-input units-number">
+									<TextField
+										label={text("Units number")}
+										disabled={!this.canEdit}
+										type="number"
+										value={this.props.appointment!.units.toString()}
+										onChange={(e, newValue) => {
+											this.props.appointment!.units = num(
+												newValue!
+											);
+										}}
+									/>
+								</div>
+							</Col>
